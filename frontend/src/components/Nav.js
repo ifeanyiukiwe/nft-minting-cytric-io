@@ -7,11 +7,10 @@ import "./Nav.css";
 function Nav() {
   return (
     <nav
-      className="navbar navbar-dark py-2 px-3 fixed"
+      className="navbar navbar-dark py-2 px-3 fixed-top"
       style={{ background: "#0d131f", borderBottom: "1px solid #E5E7EB" }}
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
-        {/* Logo */}
         <Link to="/" className="navbar-brand">
           <img
             src={ThreeD}
@@ -25,7 +24,6 @@ function Nav() {
           />
         </Link>
 
-        {/* Connect Wallet Button */}
         <button
           className="btn rounded-pill d-flex align-items-center border-0 text-white"
           style={{

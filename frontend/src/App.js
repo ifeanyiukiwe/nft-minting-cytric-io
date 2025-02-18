@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
-import Nav from "./component/Nav";
+import Nav from "./components/Nav";
 import NftM from "./pages/NftM";
 import Nft from "./pages/Nft";
-import Footer from "./component/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/message")
+      .get("/api/message")
       .then((res) => setMessage(res.data.message))
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
